@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rongyang Sun's Blog | Simple Blog Built by Pelican with blue-penguin theme</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rongyang Sun" />
+
+    <meta name="keywords" content="python,Pelican,web,blog-dev" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/archives">Archives</a></li>
+                <li><a href="/pages/aboutme.html">About Me</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="/">Rongyang Sun's Blog</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Mar 08, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/2020/simple-blog-built-by-pelican-with-blue-penguin-theme.html" rel="bookmark" title="Permanent Link to &quot;Simple Blog Built by Pelican with blue-penguin theme&quot;">Simple Blog Built by Pelican with blue-penguin theme</a>
+                </h2>
+
+                
+                
+
+                <h2>Install Python</h2>
+<p>We use the <a href="https://www.anaconda.com/">Anaconda</a> to manage Python version and packages. So we install the Anaconda first.</p>
+<p>For the Mac OS X system, we follow the official installation documentation at <a href="https://docs.anaconda.com/anaconda/install/mac-os/">here</a>. To simplify, you can choose graphical install.</p>
+<p>After Install the Anaconda, start the <code>Anaconda-Navigator</code> application. Then start a enviroment at the terminal by <code>Environments -&gt; base(root) -&gt; Open terminal</code>. <img alt="" src="/2020/figures/start-terminal-using-anaconda-navigator.png"></p>
+<h2>Install Pelican</h2>
+<p>It is easy to install Pelican using <code>pip</code>. At the command line, use the command below</p>
+<div class="highlight"><pre><span></span><code>&gt; pip install pelican
+</code></pre></div>
+
+
+<p>where <code>&gt;</code> is the prompt. Since we use the Markdown to write the blog article. We also need install the Markdown package.</p>
+<div class="highlight"><pre><span></span><code>&gt; pip install markdown
+</code></pre></div>
+
+
+<h2>Create a Pelican project</h2>
+<p>After the Pelican is installed, we can create our own website project using it. Using the command line, we navigate to the project root path. We substitute the project root path with <code>proj-root</code>.</p>
+<div class="highlight"><pre><span></span><code>&gt; <span class="nb">cd</span> proj-root
+</code></pre></div>
+
+
+<p>Then use the <code>pelican-quickstart</code> command to create a Pelican project. This interactive command will ask you some question and setup basic things for you. This process seems like</p>
+<div class="highlight"><pre><span></span><code>&gt; pelican-quickstart
+
+
+Welcome to pelican-quickstart v4.2.0.
+
+This script will <span class="nb">help</span> you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+
+&gt; Where <span class="k">do</span> you want to create your new web site? <span class="o">[</span>.<span class="o">]</span>
+&gt; What will be the title of this web site? Rongyang Sun<span class="err">&#39;</span> Blog
+&gt; Who will be the author of this web site? Rongyang Sun
+&gt; What will be the default language of this web site? <span class="o">[</span>en<span class="o">]</span>
+&gt; Do you want to specify a URL prefix? e.g., https://example.com   <span class="o">(</span>Y/n<span class="o">)</span> n
+&gt; Do you want to <span class="nb">enable</span> article pagination? <span class="o">(</span>Y/n<span class="o">)</span> n
+&gt; What is your <span class="nb">time</span> zone? <span class="o">[</span>Europe/Paris<span class="o">]</span> Asia/Shanghai
+&gt; Do you want to generate a tasks.py/Makefile to automate generation and publishing? <span class="o">(</span>Y/n<span class="o">)</span> Y
+&gt; Do you want to upload your website using FTP? <span class="o">(</span>y/N<span class="o">)</span> N
+&gt; Do you want to upload your website using SSH? <span class="o">(</span>y/N<span class="o">)</span> N
+&gt; Do you want to upload your website using Dropbox? <span class="o">(</span>y/N<span class="o">)</span> N
+&gt; Do you want to upload your website using S3? <span class="o">(</span>y/N<span class="o">)</span> N
+&gt; Do you want to upload your website using Rackspace Cloud Files? <span class="o">(</span>y/N<span class="o">)</span> N
+&gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
+&gt; Is this your personal page <span class="o">(</span>username.github.io<span class="o">)</span>? <span class="o">(</span>y/N<span class="o">)</span> y
+Done. Your new project is available at proj-root
+</code></pre></div>
+
+
+<p>After these Q&amp;A, Pelican creates setting files, content folder and output folder. we show the basic file structure of a Pelican project here.</p>
+<div class="highlight"><pre><span></span><code>.
+<span class="p">|</span>-- Makefile        <span class="c1"># generate, clean, pubish, etc. the website using make</span>
+<span class="p">|</span>-- content         <span class="c1"># content paht for the website</span>
+<span class="p">|</span>-- output          <span class="c1"># root path for the generated website</span>
+<span class="p">|</span>-- pelicanconf.py  <span class="c1"># Pelican setting file for development</span>
+<span class="p">|</span>-- publishconf.py  <span class="c1"># Pelican setting file for publish</span>
+<span class="sb">`</span>-- tasks.py        <span class="c1"># Python API to generate, clean, publish, etc. the website. We will not use them.</span>
+</code></pre></div>
+
+
+<h2>Use the blue-penguin theme</h2>
+<p>To use a Pelican theme, we should create a <code>theme</code> folder under the <code>proj-root</code>:</p>
+<div class="highlight"><pre><span></span><code>&gt; mkdir theme
+</code></pre></div>
+
+
+<p>Then, install the blue-penguin theme using <code>git</code> from its project repository:</p>
+<div class="highlight"><pre><span></span><code>&gt; git clone https://github.com/jody-frankowski/blue-penguin.git theme/blue-penguin
+</code></pre></div>
+
+
+<p>Finally, set the theme to blue-penguin in setting file <code>pelicanconf.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;themes/blue-penguin&#39;</span>
+</code></pre></div>
+
+
+<h2>Do some basic settings</h2>
+<p>Up to now, we have almost completed. Let us see what we website looks like.</p>
+<div class="highlight"><pre><span></span><code>&gt; make devserver
+</code></pre></div>
+
+
+<p>Here, if you just type <code>make</code>, it will display helps to you. Now switch to your web browser, visit <code>127.0.0.1:8000</code>. You will see something likes <img alt="" src="/2020/figures/blog-screenshot-1.png"></p>
+<h3>Display tags, categories and archives on menu</h3>
+<p>Follow the suggestion here: https://github.com/jody-frankowski/blue-penguin, we add the settings to the <code>pelicanconf.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">DISPLAY_PAGES_ON_MENU</span> <span class="o">=</span> <span class="bp">False</span>               <span class="c1"># Cover default setting, let the blue-penguin to control</span>
+<span class="n">TAGS_URL</span>           <span class="o">=</span> <span class="s1">&#39;tags&#39;</span>
+<span class="n">TAGS_SAVE_AS</span>       <span class="o">=</span> <span class="s1">&#39;tags/index.html&#39;</span>
+<span class="n">CATEGORIES_URL</span>     <span class="o">=</span> <span class="s1">&#39;categories&#39;</span>
+<span class="n">CATEGORIES_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;categories/index.html&#39;</span>
+<span class="n">ARCHIVES_URL</span>       <span class="o">=</span> <span class="s1">&#39;archives&#39;</span>
+<span class="n">ARCHIVES_SAVE_AS</span>   <span class="o">=</span> <span class="s1">&#39;archives/index.html&#39;</span>
+<span class="n">MENU_INTERNAL_PAGES</span> <span class="o">=</span> <span class="p">(</span>                     <span class="c1"># Set pages displayed on the menu</span>
+    <span class="p">(</span><span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="n">TAGS_URL</span><span class="p">,</span> <span class="n">TAGS_SAVE_AS</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Categories&#39;</span><span class="p">,</span> <span class="n">CATEGORIES_URL</span><span class="p">,</span> <span class="n">CATEGORIES_SAVE_AS</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Archives&#39;</span><span class="p">,</span> <span class="n">ARCHIVES_URL</span><span class="p">,</span> <span class="n">ARCHIVES_SAVE_AS</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Save these settings and Pelican will regenerate the website automatically for you. Now refresh your web browser. You will see <img alt="" src="/2020/figures/blog-screenshot-2.png"></p>
+<h3>Add an <em>About Me</em> page</h3>
+<p>Create a markdown file for <em>About Me</em></p>
+<div class="highlight"><pre><span></span><code>&gt; mkdir content/pages
+&gt; touch content/pages/aboutme.md
+</code></pre></div>
+
+
+<p>Open the markdown file and write something about yourself like</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">aboutme</span><span class="o">-</span><span class="n">slug</span><span class="o">&gt;</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">a</span> <span class="n">happy</span> <span class="n">developer</span><span class="o">.</span> <span class="n">Bla</span> <span class="n">bla</span> <span class="o">...</span>
+</code></pre></div>
+
+
+<p>Notice that the <code>Slug</code> you used here will be used again later.</p>
+<p>In the <code>pelicanconf.py</code> setting file, modify the <code>MENU_INTERNAL_PAGES</code> as</p>
+<div class="highlight"><pre><span></span><code><span class="n">MENU_INTERNAL_PAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="n">TAGS_URL</span><span class="p">,</span> <span class="n">TAGS_SAVE_AS</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Categories&#39;</span><span class="p">,</span> <span class="n">CATEGORIES_URL</span><span class="p">,</span> <span class="n">CATEGORIES_SAVE_AS</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Archives&#39;</span><span class="p">,</span> <span class="n">ARCHIVES_URL</span><span class="p">,</span> <span class="n">ARCHIVES_SAVE_AS</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;About Me&#39;</span><span class="p">,</span> <span class="s1">&#39;pages/&lt;aboutme-slug&gt;.html&#39;</span><span class="p">,</span> <span class="s1">&#39;pages/&lt;aboutme-slug&gt;.html&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>The <code>&lt;aboutme-slug&gt;</code> is the <code>Slug</code> you used in your <em>About Me</em> markdown file.</p>
+<p>Now save the setting file and refresh your web browser. You will see <img alt="" src="/2020/figures/blog-screenshot-3.png"> <img alt="" src="/2020/figures/blog-screenshot-4.png"></p>
+<h3>Make your articles more orderly</h3>
+<p>In principal, you can put your articles to the <code>content</code> directory. But we suggest that you can group all your articles to <code>content/articles</code> using the setting in the <code>pelicanconf.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ARTICLE_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;articles&#39;</span><span class="p">]</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;articles&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>Now the Pelican only process the files in the <code>content/articles</code>.</p>
+<p>You can also set the article's url and location by adding</p>
+<div class="highlight"><pre><span></span><code><span class="n">ARTICLE_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;{date:%Y}/{slug}.html&#39;</span>
+<span class="n">ARTICLE_URL</span> <span class="o">=</span> <span class="s1">&#39;{date:%Y}/{slug}.html&#39;</span>
+</code></pre></div>
+
+
+<p>to the <code>pelicanconf.py</code>. Now the Pelican will generate your article to <code>&lt;output-dir&gt;/&lt;year&gt;/&lt;slug&gt;.html</code>.</p>
+<h2>Write article</h2>
+<p>For testing, let us write a test post. First, create the markdown file</p>
+<div class="highlight"><pre><span></span><code>&gt; mkdir content/articles
+&gt; touch content/articles/test-post.md
+</code></pre></div>
+
+
+<p>Open the article file and write something</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">test</span> <span class="n">post</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">22</span> <span class="mi">14</span><span class="o">:</span><span class="mi">45</span>
+<span class="n">Author</span><span class="o">:</span> <span class="n">Rongyang</span> <span class="n">Sun</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">test</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">test</span><span class="o">,</span> <span class="n">blog</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">my</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="n">post</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">This</span> <span class="k">is</span> <span class="n">the</span> <span class="n">summary</span> <span class="n">of</span> <span class="k">this</span> <span class="n">article</span>
+
+<span class="err">##</span> <span class="n">Head</span> <span class="n">Level</span> <span class="mi">2</span>
+<span class="n">Here</span> <span class="k">is</span> <span class="n">the</span> <span class="n">content</span><span class="o">.</span> <span class="n">Bla</span> <span class="n">bla</span> <span class="o">...</span>
+
+<span class="err">###</span> <span class="n">Head</span> <span class="n">Level</span> <span class="mi">3</span>
+<span class="err">####</span> <span class="n">Head</span> <span class="n">Level</span> <span class="mi">4</span>
+</code></pre></div>
+
+
+<p>Once you save your modification, the Pelican will regenerate the website for you. You just need to refresh the browser to check. You will see your website like <img alt="Home" src="/2020/figures/blog-screenshot-5.png"> <img alt="" src="/2020/figures/blog-screenshot-6.png"> <img alt="" src="/2020/figures/blog-screenshot-7.png"> <img alt="" src="/2020/figures/blog-screenshot-8.png"></p>
+<h2>Publish your blog to Github</h2>
+<h3>Generate website</h3>
+<div class="highlight"><pre><span></span><code>&gt; make html
+</code></pre></div>
+
+
+<h3>Create the Github Pages repository on the Github</h3>
+<p>From now on, consider your github account name is <code>&lt;gh-name&gt;</code>. Visit <code>https://github.com/&lt;gh-name&gt;</code> and create a new public repository called <code>&lt;gh-name&gt;.github.io</code> like </p>
+<ul>
+<li>step one <img alt="" src="/2020/figures/create-githubpage-1.png"></li>
+<li>step two <img alt="" src="/2020/figures/create-githubpage-2.png"></li>
+</ul>
+<h3>Push your blog website to the Github Pages repository</h3>
+<p>Go to the Pelican output directory and initialize a local git repository</p>
+<div class="highlight"><pre><span></span><code>&gt; <span class="nb">cd</span> output
+&gt; git init
+</code></pre></div>
+
+
+<p>Then add all the things in this folder to the git repository</p>
+<div class="highlight"><pre><span></span><code>&gt; git add .
+</code></pre></div>
+
+
+<p>Then create a git commit</p>
+<div class="highlight"><pre><span></span><code>&gt; git commit -m <span class="s2">&quot;My blog&#39;s first commit&quot;</span>
+</code></pre></div>
+
+
+<p>Finally, you can push your local git repository to the Github Pages repository you created above</p>
+<div class="highlight"><pre><span></span><code>&gt; git remote add origin https://github.com/&lt;gh-name&gt;/&lt;gh-name&gt;.github.io.git
+&gt; git push -u origin master
+</code></pre></div>
+
+
+<h3>View your blog website</h3>
+<p>Wait several minutes and go to <code>&lt;gh-name&gt;.github.io</code> to check your website.</p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/2020/simple-blog-built-by-pelican-with-blue-penguin-theme.html">posted at 20:53</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/blog-development.html" rel="tag">Blog development</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/python.html" class="tags">python</a>
+                    &nbsp;<a href="/tag/pelican.html" class="tags">Pelican</a>
+                    &nbsp;<a href="/tag/web.html" class="tags">web</a>
+                    &nbsp;<a href="/tag/blog-dev.html" class="tags">blog-dev</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
