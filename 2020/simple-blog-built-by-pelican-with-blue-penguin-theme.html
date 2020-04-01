@@ -249,6 +249,29 @@ Done. Your new project is available at proj-root
 
 <h3>View your blog website</h3>
 <p>Wait several minutes and go to <code>&lt;gh-name&gt;.github.io</code> to check your website.</p>
+<h2>Continue to update your blog</h2>
+<p>After you do some update for your blog, for example you modify a post or write a new one, you can update your website using the following steps.</p>
+<ul>
+<li>generate your website</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&gt; make html
+</code></pre></div>
+
+
+<ul>
+<li>update your local git repository</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&gt; <span class="nb">cd</span> output
+&gt; git add .
+&gt; git commit -m <span class="s2">&quot;&lt;your comments like &#39;blog update&#39;&gt;&quot;</span>
+</code></pre></div>
+
+
+<ul>
+<li>push to remote Github Pages repository</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&gt; git push origin master
+</code></pre></div>
                 <div class="clear"></div>
 
                 <div class="info">
