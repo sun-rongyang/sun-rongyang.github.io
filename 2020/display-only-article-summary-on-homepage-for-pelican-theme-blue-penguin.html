@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rongyang Sun's Blog | Display only article summary on homepage for Pelican theme blue-penguin</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Rongyang Sun" />
+
+    <meta name="keywords" content="html,Pelican,web,blog-dev" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/archives">Archives</a></li>
+                <li><a href="/pages/aboutme.html">About Me</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="/">Rongyang Sun's Blog</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Apr 02, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/2020/display-only-article-summary-on-homepage-for-pelican-theme-blue-penguin.html" rel="bookmark" title="Permanent Link to &quot;Display only article summary on homepage for Pelican theme blue-penguin&quot;">Display only article summary on homepage for Pelican theme blue-penguin</a>
+                </h2>
+
+                
+                
+
+                <p>In the original <strong>blue-penguin</strong> theme, the whole article will be displayed on the homepage. If the article is long, your homepage will look verbosely. You can slightly modify the theme to display the <code>Summary</code> of an article only.</p>
+<p>Note that I use the version of the blue-penguin is <a href="https://github.com/jody-frankowski/blue-penguin/releases/tag/1.0.0">1.0.0</a></p>
+<h2>Only display the summary</h2>
+<p>Let us suppose your website project root directory is <code>proj-root</code>. Go to the <code>proj-root</code> and</p>
+<div class="highlight"><pre><span></span><code>&gt; cp themes/blue-penguin/templates/article_stub.html themes/blue-penguin/templates/article_stub_home.html
+</code></pre></div>
+
+
+<p>Then Open the <code>themes/blue-penguin/templates/article_stub_home.html</code> and modify the <code>article.content</code> to <code>article.summary</code>.</p>
+<p>Then Open the <code>themes/blue-penguin/templates/index.html</code> and modify</p>
+<div class="highlight"><pre><span></span><code>{<span class="o">%</span>   <span class="k">include</span> <span class="s2">&quot;</span><span class="s">article_stub.html</span><span class="s2">&quot;</span> <span class="o">%</span>}
+</code></pre></div>
+
+
+<p>to</p>
+<div class="highlight"><pre><span></span><code>{<span class="o">%</span>   <span class="k">include</span> <span class="s2">&quot;</span><span class="s">article_stub_home.html</span><span class="s2">&quot;</span> <span class="o">%</span>}
+</code></pre></div>
+
+
+<p>Now your homepage will only display the article summary.</p>
+<h2>Add a hyperlink button to jump to the article</h2>
+<p>It is very convenient to add a hyperlink to jump to the article full text under the article summary on the homepage. Add the following code to <code>article_stub_home.html</code> under the line <code>{{ article.summary }}</code> in your theme template directory.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;more&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/{{ article.url }}&quot;</span><span class="p">&gt;</span>More<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>Then set some format for this in the theme CSS file <code>themes/blue-penguin/static/css/main.css</code>. Add these settings</p>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="p">.</span><span class="nc">more</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#BBB</span><span class="p">;</span>
+
+    <span class="k">font-family</span><span class="p">:</span> <span class="kc">sans-serif</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Finally regenerate your website add deploy it. For the real effect, you can see the homepage of this blog.</p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/2020/display-only-article-summary-on-homepage-for-pelican-theme-blue-penguin.html">posted at 21:29</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/blog-development.html" rel="tag">Blog development</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/html.html" class="tags">html</a>
+                    &nbsp;<a href="/tag/pelican.html" class="tags">Pelican</a>
+                    &nbsp;<a href="/tag/web.html" class="tags">web</a>
+                    &nbsp;<a href="/tag/blog-dev.html" class="tags">blog-dev</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
