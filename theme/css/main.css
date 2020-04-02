@@ -148,6 +148,13 @@ thead {
     border: 1px #999 solid;
 }
 
+div.more a {
+    color: #BBB;
+
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
 .post {
     margin: 0 0 4.5em 150px;
 }
