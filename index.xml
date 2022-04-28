@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rongyang Sun&#39;s Space</title>
+    <link>https://sun-rongyang.github.io/</link>
+    <description>Recent content on Rongyang Sun&#39;s Space</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://sun-rongyang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://sun-rongyang.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sun-rongyang.github.io/about/</guid>
+      <description>I am &amp;hellip;</description>
+    </item>
+    
+    
+    
+  </channel>
+</rss>

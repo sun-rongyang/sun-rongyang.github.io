@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://sun-rongyang.github.io/sitemap.xml
