@@ -5,11 +5,11 @@
     <link>https://sun-rongyang.github.io/tags/latex/</link>
     <description>Recent content in latex on Rongyang Sun&#39;s Space</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sun-rongyang.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sun-rongyang.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use KaTaX to render math </title>
       <link>https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/</link>
-      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/</guid>
       <description>PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.

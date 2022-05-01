@@ -56,8 +56,8 @@ Set up First, you need to create the HTML file layouts/partials/extend_head.html
 {{ if or .Params.math .Site.Params.math }} &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34; integrity=&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34; crossorigin=&#34;anonymous&#34;&gt; &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34; integrity=&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt; &lt;script defer src=&#34;https://cdn." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-04-28T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-04-28T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2022-05-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-05-01T00:00:00&#43;00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Use KaTaX to render math "/>
@@ -96,11 +96,11 @@ Set up First, you need to create the HTML file layouts/partials/extend_head.html
   "keywords": [
     "hugo", "paper-mode", "katax", "latex"
   ],
-  "articleBody": "PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.\nSet up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.\n{{ if or .Params.math .Site.Params.math }} link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css\" integrity=\"sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB\" crossorigin=\"anonymous\" script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js\" integrity=\"sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p\" crossorigin=\"anonymous\"script script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js\" integrity=\"sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR\" crossorigin=\"anonymous\"script script document.addEventListener(\"DOMContentLoaded\", function() { renderMathInElement(document.body, { // customised options  // • auto-render specific keys, e.g.:  delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\\\(', right: '\\\\)', display: false}, {left: '\\\\[', right: '\\\\]', display: true} ], // • rendering keys, e.g.:  throwOnError : false }); }); script {{ end }} To turn on/off the math support for the whole site, you can use the following setting in the site configure file.\nmath:true# math: falseTo turn on/off the math support for a specific page, you can set the same parameter in the page’s head matter.\n--- math: true math: false --- Use the latex math This is a inline math example $E = mc^{2}$ (source code: $E = mc^{2}$).\nThis is a display math example $$ E = mc^{2}~. $$ The related source code is\n$$ E = mc^{2}~. $$ Reference  https://adityatelange.github.io/hugo-PaperMod/posts/math-typesetting/ (original document provided by PaperMod theme) https://katex.org/docs/autorender.html (KaTex autorender code snippet)  ",
-  "wordCount" : "235",
+  "articleBody": "PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.\nSet up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.\n{{ if or .Params.math .Site.Params.math }} link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css\" integrity=\"sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB\" crossorigin=\"anonymous\" script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js\" integrity=\"sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p\" crossorigin=\"anonymous\"script script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js\" integrity=\"sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR\" crossorigin=\"anonymous\"script script document.addEventListener(\"DOMContentLoaded\", function() { renderMathInElement(document.body, { // customised options  // • auto-render specific keys, e.g.:  delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\\\(', right: '\\\\)', display: false}, {left: '\\\\[', right: '\\\\]', display: true} ], // • rendering keys, e.g.:  throwOnError : false }); }); script {{ end }} To turn on/off the math support for the whole site, you can use the following setting in the site configure file.\nmath:true# math: falseTo turn on/off the math support for a specific page, you can set the same parameter in the page’s head matter.\n--- math: true # math: false --- Use the latex math This is a inline math example $E = mc^{2}$ (source code: $E = mc^{2}$).\nThis is a display math example $$ E = mc^{2}~. $$ The related source code is\n$$ E = mc^{2}~. $$ Reference  https://adityatelange.github.io/hugo-PaperMod/posts/math-typesetting/ (original document provided by PaperMod theme) https://katex.org/docs/autorender.html (KaTex autorender code snippet)  ",
+  "wordCount" : "236",
   "inLanguage": "en",
-  "datePublished": "2022-04-28T00:00:00Z",
-  "dateModified": "2022-04-28T00:00:00Z",
+  "datePublished": "2022-05-01T00:00:00Z",
+  "dateModified": "2022-05-01T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "Rongyang Sun"
@@ -188,7 +188,7 @@ Set up First, you need to create the HTML file layouts/partials/extend_head.html
     <h1 class="post-title">
       Use KaTaX to render math 
     </h1>
-    <div class="post-meta"><span title='2022-04-28 00:00:00 +0000 UTC'>April 28, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rongyang Sun
+    <div class="post-meta"><span title='2022-05-01 00:00:00 +0000 UTC'>May 1, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rongyang Sun
 
 </div>
   </header> <div class="toc">
@@ -240,7 +240,7 @@ Set up First, you need to create the HTML file layouts/partials/extend_head.html
 </span></span></span></code></pre></div><p>To turn on/off the math support for a specific page, you can set the same parameter in the page&rsquo;s head matter.</p>
 <pre tabindex="0"><code>---
 math: true
-math: false
+# math: false
 ---
 </code></pre><h2 id="use-the-latex-math">Use the latex math<a hidden class="anchor" aria-hidden="true" href="#use-the-latex-math">#</a></h2>
 <p>This is a inline math example $E = mc^{2}$ (source code: <code>$E = mc^{2}$</code>).</p>
