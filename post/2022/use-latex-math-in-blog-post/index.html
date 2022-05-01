@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Use KaTaX to render math  | Rongyang Sun&#39;s Space</title>
+<meta name="keywords" content="hugo, paper-mode, katax, latex">
+<meta name="description" content="PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.
+Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
+{{ if or .Params.math .Site.Params.math }} &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34; integrity=&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34; crossorigin=&#34;anonymous&#34;&gt; &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34; integrity=&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt; &lt;script defer src=&#34;https://cdn.">
+<meta name="author" content="Rongyang Sun">
+<link rel="canonical" href="https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.b4e19c453811e60acfec1f00c15ac2be1c53f6ab90187e684358ce7faaf48bab.css" integrity="sha256-tOGcRTgR5grP7B8AwVrCvhxT9quQGH5oQ1jOf6r0i6s=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js" integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://sun-rongyang.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sun-rongyang.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sun-rongyang.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sun-rongyang.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sun-rongyang.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+<meta property="og:title" content="Use KaTaX to render math " />
+<meta property="og:description" content="PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.
+Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
+{{ if or .Params.math .Site.Params.math }} &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34; integrity=&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34; crossorigin=&#34;anonymous&#34;&gt; &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34; integrity=&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt; &lt;script defer src=&#34;https://cdn." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-28T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Use KaTaX to render math "/>
+<meta name="twitter:description" content="PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.
+Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
+{{ if or .Params.math .Site.Params.math }} &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34; integrity=&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34; crossorigin=&#34;anonymous&#34;&gt; &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34; integrity=&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt; &lt;script defer src=&#34;https://cdn."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sun-rongyang.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Use KaTaX to render math ",
+      "item": "https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Use KaTaX to render math ",
+  "name": "Use KaTaX to render math ",
+  "description": "PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.\nSet up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.\n{{ if or .Params.math .Site.Params.math }} \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css\u0026#34; integrity=\u0026#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB\u0026#34; crossorigin=\u0026#34;anonymous\u0026#34;\u0026gt; \u0026lt;script defer src=\u0026#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js\u0026#34; integrity=\u0026#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p\u0026#34; crossorigin=\u0026#34;anonymous\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script defer src=\u0026#34;https://cdn.",
+  "keywords": [
+    "hugo", "paper-mode", "katax", "latex"
+  ],
+  "articleBody": "PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.\nSet up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.\n{{ if or .Params.math .Site.Params.math }} link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css\" integrity=\"sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB\" crossorigin=\"anonymous\" script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js\" integrity=\"sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p\" crossorigin=\"anonymous\"script script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js\" integrity=\"sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR\" crossorigin=\"anonymous\"script script document.addEventListener(\"DOMContentLoaded\", function() { renderMathInElement(document.body, { // customised options  // • auto-render specific keys, e.g.:  delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\\\(', right: '\\\\)', display: false}, {left: '\\\\[', right: '\\\\]', display: true} ], // • rendering keys, e.g.:  throwOnError : false }); }); script {{ end }} To turn on/off the math support for the whole site, you can use the following setting in the site configure file.\nmath:true# math: falseTo turn on/off the math support for a specific page, you can set the same parameter in the page’s head matter.\n--- math: true math: false --- Use the latex math This is a inline math example $E = mc^{2}$ (source code: $E = mc^{2}$).\nThis is a display math example $$ E = mc^{2}~. $$ The related source code is\n$$ E = mc^{2}~. $$ Reference  https://adityatelange.github.io/hugo-PaperMod/posts/math-typesetting/ (original document provided by PaperMod theme) https://katex.org/docs/autorender.html (KaTex autorender code snippet)  ",
+  "wordCount" : "235",
+  "inLanguage": "en",
+  "datePublished": "2022-04-28T00:00:00Z",
+  "dateModified": "2022-04-28T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Rongyang Sun"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rongyang Sun's Space",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sun-rongyang.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sun-rongyang.github.io/" accesskey="h" title="Rongyang Sun&#39;s Space (Alt + H)">Rongyang Sun&#39;s Space</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sun-rongyang.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sun-rongyang.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sun-rongyang.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sun-rongyang.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://sun-rongyang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://sun-rongyang.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      Use KaTaX to render math 
+    </h1>
+    <div class="post-meta"><span title='2022-04-28 00:00:00 +0000 UTC'>April 28, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rongyang Sun
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#set-up" aria-label="Set up">Set up</a></li>
+                <li>
+                    <a href="#use-the-latex-math" aria-label="Use the latex math">Use the latex math</a></li>
+                <li>
+                    <a href="#reference" aria-label="Reference">Reference</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><a href="https://github.com/adityatelange/hugo-PaperMod">PaperMode</a> theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.</p>
+<h2 id="set-up">Set up<a hidden class="anchor" aria-hidden="true" href="#set-up">#</a></h2>
+<p>First, you need to create the HTML file <code>layouts/partials/extend_head.html</code> relative to your website source code root. Then you can fill in the <a href="https://katex.org/docs/autorender.html">following codes</a> in this file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if or .Params.math .Site.Params.math }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;DOMContentLoaded&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// customised options
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="c1">// • auto-render specific keys, e.g.:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">delimiters</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;\\(&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;\\)&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;\\[&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;\\]&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">          <span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// • rendering keys, e.g.:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">throwOnError</span> <span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></div><p>To turn on/off the math support for the whole site, you can use the following setting in the site configure file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">math</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># math: false</span><span class="w">
+</span></span></span></code></pre></div><p>To turn on/off the math support for a specific page, you can set the same parameter in the page&rsquo;s head matter.</p>
+<pre tabindex="0"><code>---
+math: true
+math: false
+---
+</code></pre><h2 id="use-the-latex-math">Use the latex math<a hidden class="anchor" aria-hidden="true" href="#use-the-latex-math">#</a></h2>
+<p>This is a inline math example $E = mc^{2}$ (source code: <code>$E = mc^{2}$</code>).</p>
+<p>This is a display math example
+$$
+E = mc^{2}~.
+$$
+The related source code is</p>
+<pre tabindex="0"><code>$$
+E = mc^{2}~.
+$$
+</code></pre><h2 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h2>
+<ul>
+<li><a href="https://adityatelange.github.io/hugo-PaperMod/posts/math-typesetting/">https://adityatelange.github.io/hugo-PaperMod/posts/math-typesetting/</a> (original document provided by PaperMod theme)</li>
+<li><a href="https://katex.org/docs/autorender.html">https://katex.org/docs/autorender.html</a> (KaTex autorender code snippet)</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sun-rongyang.github.io/tags/hugo/">hugo</a></li>
+      <li><a href="https://sun-rongyang.github.io/tags/paper-mode/">paper-mode</a></li>
+      <li><a href="https://sun-rongyang.github.io/tags/katax/">katax</a></li>
+      <li><a href="https://sun-rongyang.github.io/tags/latex/">latex</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://sun-rongyang.github.io/">Rongyang Sun&#39;s Space</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

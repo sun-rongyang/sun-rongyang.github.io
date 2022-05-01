@@ -29,7 +29,27 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Rongyang Sun&#39;s Space" />
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+<meta property="og:title" content="Rongyang Sun&#39;s Space" />
 <meta property="og:description" content="Rongyang Sun&#39;s homepage" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://sun-rongyang.github.io/" />
@@ -148,6 +168,20 @@
 </div>
 
     </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Use KaTaX to render math 
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.
+Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
+{{ if or .Params.math .Site.Params.math }} &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34; integrity=&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34; crossorigin=&#34;anonymous&#34;&gt; &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34; integrity=&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt; &lt;script defer src=&#34;https://cdn....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-04-28 00:00:00 +0000 UTC'>April 28, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rongyang Sun</footer>
+  <a class="entry-link" aria-label="post link to Use KaTaX to render math " href="https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/"></a>
 </article>
     </main>
     

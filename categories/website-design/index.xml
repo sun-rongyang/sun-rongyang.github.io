@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Rongyang Sun&#39;s Space</title>
-    <link>https://sun-rongyang.github.io/</link>
-    <description>Recent content on Rongyang Sun&#39;s Space</description>
+    <title>Website Design on Rongyang Sun&#39;s Space</title>
+    <link>https://sun-rongyang.github.io/categories/website-design/</link>
+    <description>Recent content in Website Design on Rongyang Sun&#39;s Space</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sun-rongyang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sun-rongyang.github.io/categories/website-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use KaTaX to render math </title>
       <link>https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/</link>
@@ -16,8 +16,6 @@
 Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
 {{ if or .Params.math .Site.Params.math }} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.</description>
     </item>
-    
-    
     
   </channel>
 </rss>

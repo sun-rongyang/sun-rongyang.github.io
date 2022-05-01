@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Archive | Rongyang Sun&#39;s Space</title>
+<title>Website Design | Rongyang Sun&#39;s Space</title>
 <meta name="keywords" content="">
-<meta name="description" content="archives">
+<meta name="description" content="Rongyang Sun&#39;s homepage">
 <meta name="author" content="Rongyang Sun">
-<link rel="canonical" href="https://sun-rongyang.github.io/archives/">
+<link rel="canonical" href="https://sun-rongyang.github.io/categories/website-design/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.b4e19c453811e60acfec1f00c15ac2be1c53f6ab90187e684358ce7faaf48bab.css" integrity="sha256-tOGcRTgR5grP7B8AwVrCvhxT9quQGH5oQ1jOf6r0i6s=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://sun-rongyang.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://sun-rongyang.github.io/favicon-16x16.png">
@@ -18,6 +18,7 @@
 <link rel="mask-icon" href="https://sun-rongyang.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://sun-rongyang.github.io/categories/website-design/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -46,65 +47,15 @@
         });
     });
 </script>
-<meta property="og:title" content="Archive" />
-<meta property="og:description" content="archives" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sun-rongyang.github.io/archives/" /><meta property="article:section" content="" />
-
-
+<meta property="og:title" content="Website Design" />
+<meta property="og:description" content="Rongyang Sun&#39;s homepage" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sun-rongyang.github.io/categories/website-design/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Archive"/>
-<meta name="twitter:description" content="archives"/>
+<meta name="twitter:title" content="Website Design"/>
+<meta name="twitter:description" content="Rongyang Sun&#39;s homepage"/>
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Archive",
-      "item": "https://sun-rongyang.github.io/archives/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Archive",
-  "name": "Archive",
-  "description": "archives",
-  "keywords": [
-    
-  ],
-  "articleBody": "",
-  "wordCount" : "0",
-  "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "Rongyang Sun"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://sun-rongyang.github.io/archives/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rongyang Sun's Space",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sun-rongyang.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -145,7 +96,7 @@
         <ul id="menu">
             <li>
                 <a href="https://sun-rongyang.github.io/archives" title="Archive">
-                    <span class="active">Archive</span>
+                    <span>Archive</span>
                 </a>
             </li>
             <li>
@@ -166,26 +117,24 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-
-<header class="page-header">
-  <h1>Archive</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://sun-rongyang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://sun-rongyang.github.io/categories/">Categories</a></div>
+  <h1>Website Design</h1>
 </header>
-<div class="archive-year">
-  <h2 class="archive-year-header">2022<sup class="archive-count">&nbsp;&nbsp;1</sup>
-  </h2>
-  <div class="archive-month">
-    <h3 class="archive-month-header">April<sup class="archive-count">&nbsp;&nbsp;1</sup></h3>
-    <div class="archive-posts">
-      <div class="archive-entry">
-        <h3 class="archive-entry-title">Use KaTaX to render math
-        </h3>
-        <div class="archive-meta"><span title='2022-04-28 00:00:00 +0000 UTC'>April 28, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rongyang Sun</div>
-        <a class="entry-link" aria-label="post link to Use KaTaX to render math " href="https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/"></a>
-      </div>
-    </div>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Use KaTaX to render math 
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.
+Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
+{{ if or .Params.math .Site.Params.math }} &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&#34; integrity=&#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&#34; crossorigin=&#34;anonymous&#34;&gt; &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&#34; integrity=&#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt; &lt;script defer src=&#34;https://cdn....</p>
   </div>
-</div>
+  <footer class="entry-footer"><span title='2022-04-28 00:00:00 +0000 UTC'>April 28, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rongyang Sun</footer>
+  <a class="entry-link" aria-label="post link to Use KaTaX to render math " href="https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/"></a>
+</article>
     </main>
     
 <footer class="footer">
