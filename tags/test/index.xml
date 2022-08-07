@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>test on Rongyang Sun&#39;s Space</title>
+    <link>https://sun-rongyang.github.io/tags/test/</link>
+    <description>Recent content in test on Rongyang Sun&#39;s Space</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 24 Apr 2022 12:00:50 +0900</lastBuildDate><atom:link href="https://sun-rongyang.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Post With Fig</title>
+      <link>https://sun-rongyang.github.io/post/test-page-bundle/</link>
+      <pubDate>Sun, 24 Apr 2022 12:00:50 +0900</pubDate>
+      
+      <guid>https://sun-rongyang.github.io/post/test-page-bundle/</guid>
+      <description>Test Image Test
+Test math This is inline math $ E = mc^{2} $.
+This is display math $$ E = mc^{2} $$
+Test code Inline code, int var = 2; inline foo() { return var; }.
+Code block
+template &amp;lt;typename T&amp;gt; class Foo {}; Test pdf PDF</description>
+    </item>
+    
+  </channel>
+</rss>
