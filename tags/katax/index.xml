@@ -8,10 +8,10 @@
     <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sun-rongyang.github.io/tags/katax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use KaTaX to render math </title>
-      <link>https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/</link>
+      <link>https://sun-rongyang.github.io/blog/2022/use-latex-math-in-blog-post/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://sun-rongyang.github.io/post/2022/use-latex-math-in-blog-post/</guid>
+      <guid>https://sun-rongyang.github.io/blog/2022/use-latex-math-in-blog-post/</guid>
       <description>PaperMode theme is easy to use, but the math formatting render is not out of the box. Lucky, it is relatively easy to set up this feature.
 Set up First, you need to create the HTML file layouts/partials/extend_head.html relative to your website source code root. Then you can fill in the following codes in this file.
 {{ if or .Params.math .Site.Params.math }} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.</description>
